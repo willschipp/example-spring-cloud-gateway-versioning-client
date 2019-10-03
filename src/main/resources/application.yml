@@ -1,0 +1,5 @@
+remote-service:
+  ribbon:
+    listOfServers: localhost:8000
+server:
+  port: 8001

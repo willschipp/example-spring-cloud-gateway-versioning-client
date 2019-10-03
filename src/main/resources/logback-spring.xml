@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+
+    <springProfile name="default">
+        <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+        <appender name="redirect" class="com.example.logging.RedirectAppender"/>
+
+        <logger name="sun.net.www.protocol.http" level="DEBUG">
+            <appender-ref ref="CONSOLE"/>
+            <appender-ref ref="redirect"/>
+        </logger>
+        <root level="INFO">
+            <appender-ref ref="CONSOLE"/>
+        </root>
+
+    </springProfile>
+
+</configuration>

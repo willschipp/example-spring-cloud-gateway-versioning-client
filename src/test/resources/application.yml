@@ -1,0 +1,6 @@
+---
+spring:
+  profiles: test
+remote-service:
+  ribbon:
+    listOfServers: localhost:9000
